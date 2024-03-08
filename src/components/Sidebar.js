@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons";
 import { Layout, Menu, Button, theme } from "antd";
 import { Route, Routes, useNavigate } from "react-router-dom";
+import './sidebar.css'
 
 // import OrderForVendor from './ui/OrderVerifycation/OrderForVendor';
 // import OrderRecivVendor from './ui/OrderVerifycation/OrderRecivVendor';
@@ -56,10 +57,11 @@ const Sidebar = () => {
   } = theme.useToken();
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider  className='light-bg' trigger={null} collapsible collapsed={collapsed} >
         <div className="demo-logo-vertical" />
         <Menu
-          theme="dark"
+          mode="inline"
+
           defaultSelectedKeys={["0"]}
           items={[
             {
@@ -237,7 +239,7 @@ const Sidebar = () => {
                   children: [
                     {
                       key: "2.3.1",
-                      label: "User Acknowledgement",
+                      label: "User",
                       onClick: () => {
                         navigate("/user/acknow");
                       },
@@ -350,7 +352,7 @@ const Sidebar = () => {
                   children: [
                     {
                       key: "3.2.1",
-                      label: "Vendor Acknowledgement",
+                      label: "Vendor",
                       onClick: () => {
                         navigate("/vendor/acknow");
                       },
@@ -399,7 +401,7 @@ const Sidebar = () => {
                   children: [
                     {
                       key: "3.7.1",
-                      label: "Vendor Delivery Tracking",
+                      label: "Vendor Tracking",
                       onClick: () => {
                         navigate("/vendor/delivery");
                       },
@@ -417,7 +419,7 @@ const Sidebar = () => {
         />
       </Sider>
       <Layout>
-        <Header
+        {/* <Header
           style={{
             padding: 0,
             background: colorBgContainer,
@@ -433,7 +435,7 @@ const Sidebar = () => {
               height: 64,
             }}
           />
-        </Header>
+        </Header> */}
         <Content
           style={{
             margin: "24px 16px",
