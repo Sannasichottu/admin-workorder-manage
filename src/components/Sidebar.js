@@ -41,6 +41,7 @@ import Payment from "./Dashboard/Settings/Payment";
 import SocialMedia from "./Dashboard/Settings/SocialMedia";
 import MailConfig from "./Dashboard/Settings/MailConfig";
 import Reports from "./Dashboard/Reports";
+import PushNotification from "./Dashboard/PushNotification";
 const {  Sider, Content } = Layout;
 
 const Sidebar = () => {
@@ -142,24 +143,10 @@ const Sidebar = () => {
 
             {
               key: "4",
-              dropdown: true,
               label: "Push Notification",
-              children: [
-                {
-                  key: "4.1",
-                  label: "Roles",
-                  onClick: () => {
-                    navigate("/admin/access/roles");
-                  },
-                },
-                {
-                  key: "4.2",
-                  label: "Permission",
-                  onClick: () => {
-                    navigate("/admin/access/permission");
-                  },
-                },
-              ],
+              onClick: () => {
+                navigate("/admin/notification");
+              },
             },
             {
               key: "5",
@@ -168,7 +155,7 @@ const Sidebar = () => {
               children: [
                 {
                   key: "5.1",
-                  label: "Vendor Quote (Recived)",
+                  label: "Vendor-Quote(Received)",
                   onClick: () => {
                     navigate("/vendor/recivedQuote");
                   },
@@ -355,6 +342,7 @@ const Sidebar = () => {
             />
             <Route exact path="/admin/mail" element={<MailConfig />} />
             <Route exact path="/admin/report" element={<Reports />} />
+            <Route exact path="/admin/notification" element={<PushNotification />} />
 
             {/* User */}
             {/* Enquiry Form */}
