@@ -1,5 +1,6 @@
 import React from 'react'
 import {   Table, Tag } from 'antd';
+import { Link } from 'react-router-dom';
 
 const columns = [
   {
@@ -149,8 +150,9 @@ const data = [
 const UserDelivery = () => {
   return (
     <div>
+  
     <hr />
-    <h2 style={{textAlign:'center', color:'red'}}>Delivery to User</h2>
+    <h2 style={{textAlign:'center', fontSize:'16px'}}>Delivery to User</h2>
     <hr />
  
   

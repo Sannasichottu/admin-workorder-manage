@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Radio,  Table, Tag } from 'antd';
+import { Link } from 'react-router-dom';
 
 const columns = [
   {
@@ -93,9 +94,18 @@ const VendorStatus = () => {
   const [bottom, setBottom] = useState('bottomRight');
   return (
     <div>
+         <div className='navbar'>
+      <ul className='flex-list'>
+        <li><Link to="/admin/vendorManage" className='list-head'>Vendor</Link> </li>
+        <li><Link to="/vendor/acknow" className='list-head'>Acknowledgement</Link> </li>
+        <li><Link to="/vendor/status" className='list-head'>Status</Link> </li>
+        <li><Link to="/vendor/history" className='list-head'>History</Link> </li>
+        <li><Link to="/vendor/invoice" className='list-head'>Invoice</Link> </li>
+        <li><Link to="/vendor/payment" className='list-head'>Payment</Link> </li>
+      </ul>
+    </div> 
       <hr />
-      <h2 style={{textAlign:'center', color:"darkred"}}>Order Status</h2>
-      <h2 style={{textAlign:'center'}}>Vendor</h2>
+      <h2 style={{textAlign:'center', fontSize:'16px'}}>Order Status - vendor</h2>
       <hr />
 
     <div>

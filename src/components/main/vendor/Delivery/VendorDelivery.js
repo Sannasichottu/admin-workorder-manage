@@ -9,6 +9,7 @@ import {
   MDBIcon,
   MDBRow,
 } from "mdb-react-ui-kit";
+import { Link } from 'react-router-dom';
 
 const VendorDelivery = () => {
   return (
@@ -20,7 +21,7 @@ const VendorDelivery = () => {
           <MDBRow className="justify-content-center align-items-center h-50">
             <MDBCol>
               <hr />
-              <h2 style={{textAlign:'center', color:'darkgreen'}}>   Delivery Tracking From Vendor</h2>
+              <h2 style={{textAlign:'center', fontSize:'16px'}}>   Delivery Tracking From Vendor</h2>
               <hr />
               <MDBCard
                 className="card-stepper"

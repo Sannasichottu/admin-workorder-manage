@@ -1,5 +1,6 @@
 import React from 'react'
 import {   Table, Tag } from 'antd';
+import { Link } from 'react-router-dom';
 
 const columns = [
   {
@@ -186,9 +187,18 @@ const data = [
 const UserAcknowledge = () => {
   return (
     <div>
+      <div className='navbar'>
+      <ul className='flex-list'>
+        <li><Link to="/admin/userManage" className='list-head'>User</Link> </li>
+        <li><Link to="/user/acknow" className='list-head'>Acknowledgement</Link> </li>
+        <li><Link to="/user/status" className='list-head'>Status</Link> </li>
+        <li><Link to="/user/history" className='list-head'>History</Link> </li>
+        <li><Link to="/user/invoice" className='list-head'>Invoice</Link> </li>
+        <li><Link to="/user/payment" className='list-head'>Payment</Link> </li>
+      </ul>
+    </div>
         <hr />
-        <h2 style={{textAlign:'center' ,color:"darkblue"}}>Acknowledgement Details</h2> <br />
-         <h2 style={{textAlign:'center'}}>User</h2>
+         <h2 style={{textAlign:'center', fontSize:'16px'}}>Acknowledgement Details - User</h2>
          <hr />
     
       

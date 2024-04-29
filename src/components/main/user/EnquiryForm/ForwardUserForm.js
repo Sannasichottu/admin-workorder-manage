@@ -1,5 +1,6 @@
 import React from 'react'
 import {   Table } from 'antd';
+import { Link } from 'react-router-dom';
 const columns = [
   {
     title: 'User',
@@ -125,9 +126,14 @@ const data = [
 const ForwardUserForm = () => {
   return (
     <div>
+        <div className='navbar'>
+      <ul className='flex-list'>
+        <li><Link to="/user/enquiry/recived" className='list-head'>User to Admin</Link> </li>
+        <li><Link to="/user/enquiry/forward " className='list-head'>Admin to User</Link> </li>
+      </ul>
+    </div> 
       <hr />
-    <h2 style={{textAlign:'center', color:"red"}}>Enquiry-Form</h2>
-    <h2 style={{textAlign:'center'}}>Forward to User List</h2>
+    <h2 style={{textAlign:'center' , fontSize:'16px'}}>Forward to User List</h2>
     <hr />
 <Table columns={columns} dataSource={data} />
 </div>

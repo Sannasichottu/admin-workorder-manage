@@ -12,7 +12,7 @@ const Dashboard = () => {
         <div className='main_title'>
                 <img src={hello} alt='hello' />
                 <div className='main_greeting'>
-                    <h1>Hello Tit</h1>
+                    <h1>Hello Cargo</h1>
                     <p>Welcome to your admin dashboard</p>
                 </div>
         </div>

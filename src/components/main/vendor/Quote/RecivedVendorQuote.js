@@ -146,8 +146,7 @@ const RecivedVendorQuote = () => {
   return (
     <div> 
     <hr />
-     <h2 style={{textAlign:'center', color:"red"}}>Quotation</h2>
-    <h2 style={{textAlign:'center'}}>Recived From Vendor</h2>
+     <h2 style={{textAlign:'center', fontSize:'16px'}}>Quotation From Vendor</h2>
     <hr />
   <Table columns={columns} dataSource={data} />
 </div>

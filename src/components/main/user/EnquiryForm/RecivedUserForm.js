@@ -103,9 +103,15 @@ const data = [
 const RecivedUserForm = () => {
   return (
     <div>
+       <div className='navbar'>
+      <ul className='flex-list'>
+        <li><Link to="/user/enquiry/recived" className='list-head'>User to Admin</Link> </li>
+        <li><Link to="/user/enquiry/forward " className='list-head'>Admin to User</Link> </li>
+      </ul>
+    </div> 
     <hr />
-    <h2 style={{ textAlign: "center", color: "red" }}>Enquiry-Form</h2>
-    <h2 style={{ textAlign: "center" }}>Recived From User List</h2> <hr />
+  
+    <h2 style={{ textAlign: "center" , fontSize:'16px'}}>Recived From User List</h2> <hr />
     <Table columns={columns} dataSource={data} />
   </div>
   )

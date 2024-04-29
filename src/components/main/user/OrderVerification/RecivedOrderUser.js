@@ -102,10 +102,10 @@ const data = [
 
 const RecivedOrderUser = () => {
   return (
-    <div> 
+    <div>
+     
       <hr />
-       <h2 style={{textAlign:'center', color:"darkgreen"}}>Order verification</h2>
-      <h2 style={{textAlign:'center'}}>Recived From User</h2>
+       <h2 style={{textAlign:'center', fontSize:'16px'}}>Order Verified - Recived From User</h2>
       <hr />
     <Table columns={columns} dataSource={data} />
   </div>

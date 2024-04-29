@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import {
-  AppstoreOutlined,
   LoginOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  QqOutlined,
-  UserOutlined,
 } from "@ant-design/icons";
-import { Layout, Menu, Button, theme } from "antd";
+import { Layout, Menu, theme } from "antd";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import './sidebar.css'
+import "./sidebar.css";
 
 // import OrderForVendor from './ui/OrderVerifycation/OrderForVendor';
 // import OrderRecivVendor from './ui/OrderVerifycation/OrderRecivVendor';
@@ -46,7 +41,7 @@ import Payment from "./Dashboard/Settings/Payment";
 import SocialMedia from "./Dashboard/Settings/SocialMedia";
 import MailConfig from "./Dashboard/Settings/MailConfig";
 import Reports from "./Dashboard/Reports";
-const { Header, Sider, Content } = Layout;
+const {  Sider, Content } = Layout;
 
 const Sidebar = () => {
   let navigate = useNavigate();
@@ -57,11 +52,15 @@ const Sidebar = () => {
   } = theme.useToken();
   return (
     <Layout>
-      <Sider  className='light-bg' trigger={null} collapsible collapsed={collapsed} >
+      <Sider
+        className="light-bg"
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+      >
         <div className="demo-logo-vertical" />
         <Menu
           mode="inline"
-
           defaultSelectedKeys={["0"]}
           items={[
             {
@@ -72,349 +71,217 @@ const Sidebar = () => {
               },
             },
 
+            // {
+            //   dropdown: true,
+            //   icon: <AppstoreOutlined />,
+            //   label: "Admin",
+            //   children: [
             {
-              dropdown: true,
-              icon: <AppstoreOutlined />,
-              label: "Admin",
-              children: [
-                {
-                  key: "1",
-                  label: "Dashboard",
-                  onClick: () => {
-                    navigate("/");
-                  },
-                },
-                {
-                  key: "1.2",
-                  label: "User Management",
-                  onClick: () => {
-                    navigate("/admin/userManage");
-                  },
-                },
-                {
-                  key: "1.3",
-                  label: "Vendor Management",
-                  onClick: () => {
-                    navigate("/admin/vendorManage");
-                  },
-                },
-                {
-                  key: "1.4",
-                  dropdown: true,
-                  label: "Access Management",
-                  children: [
-                    {
-                      key: "1.4.1",
-                      label: "Roles",
-                      onClick: () => {
-                        navigate("/admin/access/roles");
-                      },
-                    },
-                    {
-                      key: "1.4.2",
-                      label: "Permission",
-                      onClick: () => {
-                        navigate("/admin/access/permission");
-                      },
-                    },
-                  ],
-                },
-                {
-                  key: "1.5",
-                  dropdown: true,
-                  label: "Settings",
-                  children: [
-                    {
-                      key: "1.5.1",
-                      label: "Business Setup",
-                      onClick: () => {
-                        navigate("/admin/setting/business");
-                      },
-                    },
-                    {
-                      key: "1.5.2",
-                      label: "Configuration Setup",
-                      onClick: () => {
-                        navigate("/admin/setting/configuration");
-                      },
-                    },
-                    {
-                      key: "1.5.3",
-                      label: "Application Settings",
-                      onClick: () => {
-                        navigate("/admin/setting/application");
-                      },
-                    },
-                    {
-                      key: "1.5.4",
-                      label: "Payment Method",
-                      onClick: () => {
-                        navigate("/admin/setting/payment");
-                      },
-                    },
-                    {
-                      key: "1.5.5",
-                      label: "Social Media",
-                      onClick: () => {
-                        navigate("/admin/setting/social");
-                      },
-                    },
-                    {
-                      key: "1.5.6",
-                      label: "Mail configuration",
-                      onClick: () => {
-                        navigate("/admin/mail");
-                      },
-                    },
-                  ],
-                },
-                {
-                  key: "1.6",
-                  label: "Reports & Analytics",
-                  onClick: () => {
-                    navigate("/admin/report");
-                  },
-                },
-              ],
+              key: "1",
+              label: "Dashboard",
+              onClick: () => {
+                navigate("/");
+              },
             },
-
             {
+              key: "1.2",
+              label: "User Management",
+              onClick: () => {
+                navigate("/admin/userManage");
+              },
+            },
+            {
+              key: "1.3",
+              label: "Vendor Management",
+              onClick: () => {
+                navigate("/admin/vendorManage");
+              },
+            },
+            {
+              key: "2",
               dropdown: true,
-              label: "User",
-              icon: <UserOutlined />,
+              label: "Access Management",
               children: [
-                {
-                  key: "2.0",
-                  label: "Enquiry Form",
-                  dropdown: true,
-                  children: [
-                    {
-                      key: "2.0.1",
-                      label: "Recived User",
-                      onClick: () => {
-                        navigate("/user/enquiry/recived");
-                      },
-                    },
-                    {
-                      key: "2.0.2",
-                      label: "Forward User",
-                      onClick: () => {
-                        navigate("/user/enquiry/forward");
-                      },
-                    },
-                  ],
-                },
                 {
                   key: "2.1",
-                  label: "Order Verification",
-                  dropdown: true,
-                  children: [
-                    {
-                      key: "2.1.0",
-                      label: "Recived User",
-                      onClick: () => {
-                        navigate("/user/orderVerified");
-                      },
-                    },
-                  ],
+                  label: "Roles",
+                  onClick: () => {
+                    navigate("/admin/access/roles");
+                  },
                 },
                 {
                   key: "2.2",
-                  label: "Quote Generation",
-                  dropdown: "true",
-                  children: [
-                    {
-                      key: "2.2.1",
-                      label: "Forward User",
-                      onClick: () => {
-                        navigate("/user/forwardQuote");
-                      },
-                    },
-                  ],
-                },
-                {
-                  key: "2.3",
-                  label: "Acknowledgement",
-                  dropdown: "true",
-                  children: [
-                    {
-                      key: "2.3.1",
-                      label: "User",
-                      onClick: () => {
-                        navigate("/user/acknow");
-                      },
-                    },
-                  ],
-                },
-                {
-                  key: "2.4",
-                  label: "User Order Status",
+                  label: "Permission",
                   onClick: () => {
-                    navigate("/user/status");
+                    navigate("/admin/access/permission");
+                  },
+                },
+              ],
+            },
+            {
+              key: "3",
+              dropdown: true,
+              label: "Enquiry Management",
+              children: [
+                {
+                  key: "3.1",
+                  label: "User",
+                  onClick: () => {
+                    navigate("/user/enquiry/recived");
                   },
                 },
                 {
-                  key: "2.5",
-                  label: "User Order History",
+                  key: "3.2",
+                  label: "Vendor",
                   onClick: () => {
-                    navigate("/user/history");
+                    navigate("/vendor/enquiry/recived");
                   },
-                },
-                {
-                  key: "2.6",
-                  label: "User Invoice",
-                  onClick: () => {
-                    navigate("/user/invoice");
-                  },
-                },
-                {
-                  key: "2.7",
-                  label: "Payment",
-                  dropdown: true,
-                  children: [
-                    {
-                      key: "2.7.1",
-                      label: "User Pay History",
-                      onClick: () => {
-                        navigate("/user/payment");
-                      },
-                    },
-                  ],
-                },
-                {
-                  key: "2.8",
-                  dropdown: true,
-                  label: "Delivery Tracking",
-                  children: [
-                    {
-                      key: "2.8.1",
-                      label: "User Delivery",
-                      onClick: () => {
-                        navigate("/user/delivery");
-                      },
-                    },
-                  ],
                 },
               ],
             },
 
             {
+              key: "4",
               dropdown: true,
-              label: "Vendor",
-              icon: <QqOutlined />,
+              label: "Push Notification",
               children: [
                 {
-                  key: "3.0",
-                  label: "Enquiry Form",
-                  dropdown: true,
-                  children: [
-                    {
-                      key: "3.0.1",
-                      label: "Recived Vendor",
-                      onClick: () => {
-                        navigate("/vendor/enquiry/recived");
-                      },
-                    },
-                    {
-                      key: "3.0.2",
-                      label: "Forward Vendor",
-                      onClick: () => {
-                        navigate("/vendor/enquiry/forward");
-                      },
-                    },
-                  ],
-                },
-                {
-                  key: "3.1",
-                  dropdown: true,
-                  label: "Quote Generation",
-                  children: [
-                    {
-                      key: "3.1.1",
-                      label: "Recived Vendor",
-                      onClick: () => {
-                        navigate("/vendor/recivedQuote");
-                      },
-                    },
-                    {
-                      key: "3.1.2",
-                      label: "Edit Quote",
-                      onClick: () => {
-                        navigate("/vendor/editQuote");
-                      },
-                    },
-                  ],
-                },
-                {
-                  key: "3.2",
-                  label: "Acknowledgement",
-                  dropdown: true,
-                  children: [
-                    {
-                      key: "3.2.1",
-                      label: "Vendor",
-                      onClick: () => {
-                        navigate("/vendor/acknow");
-                      },
-                    },
-                  ],
-                },
-                {
-                  key: "3.3",
-                  label: "Vendor Order Status",
+                  key: "4.1",
+                  label: "Roles",
                   onClick: () => {
-                    navigate("/vendor/status");
+                    navigate("/admin/access/roles");
                   },
                 },
                 {
-                  key: "3.4",
-                  label: "Vendor Order History",
+                  key: "4.2",
+                  label: "Permission",
                   onClick: () => {
-                    navigate("/vendor/history");
+                    navigate("/admin/access/permission");
                   },
-                },
-                {
-                  key: "3.5",
-                  label: "Vendor Invoice",
-                  onClick: () => {
-                    navigate("/vendor/invoice");
-                  },
-                },
-                {
-                  key: "3.6",
-                  label: "Payment",
-                  dropdown: true,
-                  children: [
-                    {
-                      key: "3.6.1",
-                      label: "Vendor Pay History",
-                      onClick: () => {
-                        navigate("/vendor/payment");
-                      },
-                    },
-                  ],
-                },
-                {
-                  key: "3.7",
-                  label: "Delivery Tracking",
-                  dropdown: true,
-                  children: [
-                    {
-                      key: "3.7.1",
-                      label: "Vendor Tracking",
-                      onClick: () => {
-                        navigate("/vendor/delivery");
-                      },
-                    },
-                  ],
                 },
               ],
             },
             {
-              key:"4",
-              label:"Log out",
-              icon:<LoginOutlined />
-            }
+              key: "5",
+              dropdown: true,
+              label: "Quote Management",
+              children: [
+                {
+                  key: "5.1",
+                  label: "Vendor Quote (Recived)",
+                  onClick: () => {
+                    navigate("/vendor/recivedQuote");
+                  },
+                },
+                {
+                  key: "5.2",
+                  label: "Edit Quote (Admin)",
+                  onClick: () => {
+                    navigate("/vendor/editQuote");
+                  },
+                },
+                {
+                  key: "5.3",
+                  label: "User Quote (Forward)",
+                  onClick: () => {
+                    navigate("/user/forwardQuote");
+                  },
+                },
+              ],
+            },
+            {
+              key: "6",
+              label: "Order Management",
+              onClick: () => {
+                navigate("/user/orderVerified");
+              },
+            },
+            {
+              key: "7",
+              dropdown: true,
+              label: "Delivery Management",
+              children: [
+                {
+                  key: "7.1",
+                  label: "User",
+                  onClick: () => {
+                    navigate("/user/delivery");
+                  },
+                },
+                {
+                  key: "7.2",
+                  label: "Vendor",
+                  onClick: () => {
+                    navigate("/vendor/delivery");
+                  },
+                },
+              ],
+            },
+
+            {
+              key: "8",
+              label: "Reports & Analytics",
+              onClick: () => {
+                navigate("/admin/report");
+              },
+            },
+            {
+              key: "9",
+              dropdown: true,
+              label: "Configuration Settings",
+              children: [
+                {
+                  key: "9.1",
+                  label: "Business Setup",
+                  onClick: () => {
+                    navigate("/admin/setting/business");
+                  },
+                },
+                {
+                  key: "9.2",
+                  label: "Configuration Setup",
+                  onClick: () => {
+                    navigate("/admin/setting/configuration");
+                  },
+                },
+                {
+                  key: "9.3",
+                  label: "Application Settings",
+                  onClick: () => {
+                    navigate("/admin/setting/application");
+                  },
+                },
+                {
+                  key: "9.4",
+                  label: "Payment Method",
+                  onClick: () => {
+                    navigate("/admin/setting/payment");
+                  },
+                },
+                {
+                  key: "9.5",
+                  label: "Social Media",
+                  onClick: () => {
+                    navigate("/admin/setting/social");
+                  },
+                },
+                {
+                  key: "9.6",
+                  label: "Mail configuration",
+                  onClick: () => {
+                    navigate("/admin/mail");
+                  },
+                },
+              ],
+            },
+            //   ],
+            // },
+
+            {
+              key: "10",
+              label: "Log out",
+              icon: <LoginOutlined />,
+            },
           ]}
         />
       </Sider>
@@ -449,15 +316,43 @@ const Sidebar = () => {
           <Routes>
             {/* Admin */}
             <Route exact path="/" element={<Dashboard />} />
-            <Route exact path="/admin/userManage" element={<UserManagement />} />
-            <Route exact path="/admin/vendorManage" element={<VendorManage/>} />
+            <Route
+              exact
+              path="/admin/userManage"
+              element={<UserManagement />}
+            />
+            <Route
+              exact
+              path="/admin/vendorManage"
+              element={<VendorManage />}
+            />
             <Route exact path="/admin/access/roles" element={<AdminRoles />} />
-            <Route exact path="/admin/access/permission" element={<AdminPermission />} />
-            <Route exact path="/admin/setting/business" element={<Business />} />
-            <Route exact path="/admin/setting/configuration" element={<Configuration />} />
-            <Route exact path="/admin/setting/application" element={<Application />} />
+            <Route
+              exact
+              path="/admin/access/permission"
+              element={<AdminPermission />}
+            />
+            <Route
+              exact
+              path="/admin/setting/business"
+              element={<Business />}
+            />
+            <Route
+              exact
+              path="/admin/setting/configuration"
+              element={<Configuration />}
+            />
+            <Route
+              exact
+              path="/admin/setting/application"
+              element={<Application />}
+            />
             <Route exact path="/admin/setting/payment" element={<Payment />} />
-            <Route exact path="/admin/setting/social" element={<SocialMedia />} />
+            <Route
+              exact
+              path="/admin/setting/social"
+              element={<SocialMedia />}
+            />
             <Route exact path="/admin/mail" element={<MailConfig />} />
             <Route exact path="/admin/report" element={<Reports />} />
 

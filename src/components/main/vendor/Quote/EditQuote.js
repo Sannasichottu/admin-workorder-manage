@@ -12,12 +12,11 @@ import {
   MDBTableHead,
   MDBTableBody,
 } from "mdb-react-ui-kit";
-
 const EditQuote = () => {
   return (
     <div>
       
-    <h2 style={{textAlign:'center'}}>Invoice </h2>
+    <h2 style={{textAlign:'center', fontSize:'16px'}}>Edit Invoice</h2>
     <MDBContainer className="py-5">
     <MDBCard className="p-4">
       <MDBCardBody>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Table } from 'antd';
+import { Link } from 'react-router-dom';
 const { Column, ColumnGroup } = Table;
 const data = [
   
@@ -72,9 +73,18 @@ const data = [
 const VendorHistory = () => {
   return (
     <>
+       <div className='navbar'>
+      <ul className='flex-list'>
+        <li><Link to="/admin/vendorManage" className='list-head'>Vendor</Link> </li>
+        <li><Link to="/vendor/acknow" className='list-head'>Acknowledgement</Link> </li>
+        <li><Link to="/vendor/status" className='list-head'>Status</Link> </li>
+        <li><Link to="/vendor/history" className='list-head'>History</Link> </li>
+        <li><Link to="/vendor/invoice" className='list-head'>Invoice</Link> </li>
+        <li><Link to="/vendor/payment" className='list-head'>Payment</Link> </li>
+      </ul>
+    </div> 
     <hr />
-    <h2 style={{textAlign:'center', color:"darkgreen"}}>Order History</h2>
-    <h2 style={{textAlign:'center'}}>Vendor</h2>
+    <h2 style={{textAlign:'center', fontSize:'16px'}}>Order History - vendor</h2>
    <hr />
    <Table dataSource={data}>
      <Column title="Order Number" dataIndex="ordernum" key="ordernum" />
