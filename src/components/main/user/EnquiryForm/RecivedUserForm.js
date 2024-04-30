@@ -6,7 +6,7 @@ const columns = [
     title: "Name",
     dataIndex: "name",
     key: "name",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <a href=' '>{text}</a>,
   },
   {
     title: "Engine Code",
@@ -22,7 +22,7 @@ const columns = [
     title: "Category",
     dataIndex: "category",
     key: "category",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <a href=' '>{text}</a>,
   },
   {
     title: "Action",

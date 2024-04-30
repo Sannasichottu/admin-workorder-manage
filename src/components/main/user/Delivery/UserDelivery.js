@@ -1,13 +1,12 @@
 import React from 'react'
 import {   Table, Tag } from 'antd';
-import { Link } from 'react-router-dom';
 
 const columns = [
   {
     title: 'Invoice Number',
     dataIndex: 'num',
     key: 'num',
-    render: (text) => <a>{text}</a>,
+    render: (text) => <a href=' '>{text}</a>,
   },
   {
     title: 'Material Name',

@@ -9,7 +9,6 @@ import {
   MDBIcon,
   MDBRow,
 } from "mdb-react-ui-kit";
-import { Link } from 'react-router-dom';
 
 const VendorDelivery = () => {
   return (

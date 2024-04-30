@@ -224,36 +224,29 @@ const Sidebar = () => {
                     navigate("/admin/setting/business");
                   },
                 },
+                // {
+                //   key: "9.2",
+                //   label: "Application Settings",
+                //   onClick: () => {
+                //     navigate("/admin/setting/application");
+                //   },
+                // },
                 {
                   key: "9.2",
-                  label: "Configuration Setup",
-                  onClick: () => {
-                    navigate("/admin/setting/configuration");
-                  },
-                },
-                {
-                  key: "9.3",
-                  label: "Application Settings",
-                  onClick: () => {
-                    navigate("/admin/setting/application");
-                  },
-                },
-                {
-                  key: "9.4",
                   label: "Payment Method",
                   onClick: () => {
                     navigate("/admin/setting/payment");
                   },
                 },
                 {
-                  key: "9.5",
+                  key: "9.3",
                   label: "Social Media",
                   onClick: () => {
                     navigate("/admin/setting/social");
                   },
                 },
                 {
-                  key: "9.6",
+                  key: "9.4",
                   label: "Mail configuration",
                   onClick: () => {
                     navigate("/admin/mail");

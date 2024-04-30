@@ -22,7 +22,7 @@ const columns = [
     title: 'Vendor',
     dataIndex: 'vendor',
     key: 'vendor',
-    render: (text) => <a>{text}</a>,
+    render: (text) => <a href=' '>{text}</a>,
   }, 
   {
     title: 'Forward Date',
